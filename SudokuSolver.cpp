@@ -26,6 +26,12 @@ char** load_puzzles_from_file(const std::string& file_path, int num_puzzles) {
 	return puzzles;
 }
 
+void free_puzzles(char** puzzles, int num_puzzles) {
+	for (int i = 0; i < num_puzzles; i++)
+		delete[] puzzles[i];
+	delete[] puzzles;
+}
+
 void print_puzzle(char* puzzle) {
 	for (int row = 0; row < 9; row++) {
 		for (int col = 0; col < 9; col++)
@@ -44,4 +50,6 @@ int main() {
 	}
 
 	std::getchar();
+
+	free_puzzles(puzzles_ve, 15);
 }

@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="SudokuSolver.vcxproj" />
+  <Project Path="SudokuSolver.vcxproj" Id="dcd5a057-1892-4ddb-8bbf-a858c2cfbc8a" />
 </Solution>

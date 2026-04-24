@@ -86,7 +86,7 @@ void initialise() {
 				if (num == 0) {
 					initial_matrix[node + PREV] = header;
 					initial_matrix[header + NEXT] = node;
-				} else if (num == NUM_INTERVAL) {
+				} else if (num == 8) {
 					initial_matrix[node + NEXT] = header;
 					initial_matrix[header + PREV] = node;
 				}
@@ -101,7 +101,7 @@ void initialise() {
 				if (col == 0) {
 					initial_matrix[node + PREV] = header;
 					initial_matrix[header + NEXT] = node;
-				} else if (col == NUM_INTERVAL) {
+				} else if (col == 8) {
 					initial_matrix[node + NEXT] = header;
 					initial_matrix[header + PREV] = node;
 				}
@@ -116,7 +116,7 @@ void initialise() {
 				if (row == 0) {
 					initial_matrix[node + PREV] = header;
 					initial_matrix[header + NEXT] = node;
-				} else if (row == NUM_INTERVAL) {
+				} else if (row == 8) {
 					initial_matrix[node + NEXT] = header;
 					initial_matrix[header + PREV] = node;
 				}
@@ -137,7 +137,7 @@ void initialise() {
 					short box_pos_prev = box_pos - 1;
 					initial_matrix[node + PREV] = (box_row + box_pos_prev / 3) * ROW_INTERVAL + (box_col + box_pos_prev % 3) * COL_INTERVAL + num * NUM_INTERVAL + 6;
 				}
-				if (box_pos == NUM_INTERVAL) { // x == 8, last in box
+				if (box_pos == 8) {
 					initial_matrix[node + NEXT] = header;
 					initial_matrix[header + PREV] = node;
 				} else {
